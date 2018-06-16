@@ -42,3 +42,18 @@ class TestBoggle(unittest.TestCase):
         for letter in grid.values():
             self.assertIn(letter, ascii_uppercase)
             
+    def test_neighbours_of_a_position(self):
+        """
+        Ensure that the postion has 8 neighbours
+        """
+        coords = (1, 2)
+        neighbours = boggle.neighbours_of_position(coords)
+        self.assertIn((0, 1), neighbours)
+        self.assertIn((0, 2), neighbours)
+        self.assertIn((0, 3), neighbours)
+        self.assertIn((1, 1), neighbours)
+        self.assertIn((1, 3), neighbours)
+        self.assertIn((2, 1), neighbours)
+        self.assertIn((2, 2), neighbours)
+        self.assertIn((2, 3), neighbours)
+            
