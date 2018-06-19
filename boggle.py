@@ -55,7 +55,11 @@ def all_grid_neighbours(grid):
     
     return neighbours
     
-        
+def path_to_word(grid, path):
+    """
+    Add all of the letters on the path to a string
+    """
+    return ''.join([grid[p] for p in path])
     
     
     
